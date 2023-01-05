@@ -1,0 +1,64 @@
+.proyectos{
+    margin: 3rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+
+    h1{
+        color: white;
+    }
+
+    .texto_p{
+        h2{
+            font-family: 'Raleway', sans-serif;
+            color: white;
+            font-size: 2.3rem;
+            padding-bottom: 2px;
+        }
+
+        p{
+            font-family: 'Raleway', sans-serif;
+            color: whitesmoke;
+            font-size: 1.2rem;
+            padding-bottom: 15px;
+        }
+    }
+    //#1e2125
+
+    img{
+        width: 100%;
+        border-radius: 10px;
+
+    }
+
+    //Antara - último proyecto
+
+    .Antara{
+        background-color: #1e2125;
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border-radius: 30px;
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        padding: 19px;
+
+    }
+
+    .MaxDesign{
+        background-color: #1e2125;
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border-radius: 30px;
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        padding: 19px;
+    }
+
+    .Antara:hover, .MaxDesign:hover{
+        box-shadow: 1px -1px 25px 0px rgba(0,0,0,0.55);
+        -webkit-box-shadow: 1px -1px 25px 0px rgba(0,0,0,0.55);
+        -moz-box-shadow: 1px -1px 25px 0px rgba(0,0,0,0.55);
+    }
+};
