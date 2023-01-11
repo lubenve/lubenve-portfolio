@@ -2,10 +2,21 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
   background-color: #131518;
+}
+
+.modo_oscuro {
+  background-color: #131518;
+}
+
+.sub_t {
+  margin: 3rem;
+  color: white;
+  font-size: 2.5rem;
 }
 
 a {
@@ -23,11 +34,11 @@ h1 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 25px;
+  padding: 10px 3rem;
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: #131518;
+  /*     background-color: #131518; */
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   z-index: 100000;
@@ -43,14 +54,56 @@ h1 {
   gap: 1.2rem;
 }
 .parte_nav .nav_izq p {
-  font-family: "Raleway", sans-serif;
+  font-family: "Varela Round", sans-serif;
   color: white;
+}
+.parte_nav .nav_izq #moon {
+  color: white;
+  cursor: pointer;
+}
+
+/* ============ section ============ */
+section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  background-image: url(/public/img/IMG_9000.JPG);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* section img{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        overflow-x: hidden;
+
+}; */
+.color {
+  background-color: #131518;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 5;
+  opacity: 80%;
 }
 
 /* ============ main ============ */
 .main {
   display: flex;
-  margin: 7.2rem 3rem 0;
+  margin: 10.5rem 3rem 0;
+  position: absolute;
+  z-index: 10;
 }
 .main .texto_principal {
   width: 60%;
@@ -60,20 +113,22 @@ h1 {
   font-weight: bold;
   color: #E88997;
   font-size: 4rem;
-  padding-bottom: 10px;
+  padding-bottom: 2px;
 }
 .main .texto_principal p {
-  font-family: "Raleway", sans-serif;
+  font-family: "Varela Round", sans-serif;
   color: white;
   font-size: 1.5rem;
   width: 60%;
-  padding-bottom: 22px;
+  padding-bottom: 52px;
 }
 .main .redes {
   font-size: 2.5rem;
   color: white;
+  cursor: pointer;
+  z-index: 12;
 }
-.main #github:hover, .main #linkedin:hover {
+.main #github:hover, .main #linkedin:hover, .main #email:hover {
   color: #E88997;
   transition: all 300ms;
 }
@@ -82,6 +137,7 @@ h1 {
   justify-content: center;
   width: 50%;
   z-index: -1;
+  position: relative;
 }
 .main .foto_main #foto {
   width: 60%;
@@ -96,11 +152,21 @@ h1 {
   position: absolute;
   color: #E88997;
   font-size: 2.8rem;
-  bottom: 120px;
-  right: 176px;
+  bottom: 226px;
+  right: 156px;
   cursor: pointer;
 }
 
+@media only screen and (max-width: 768px) {
+  .main .foto_main {
+    display: none;
+  }
+}
+@media only screen and (max-width: 481px) {
+  .main .foto_main {
+    display: none;
+  }
+}
 .proyectos {
   margin: 3rem;
   display: flex;
@@ -117,7 +183,7 @@ h1 {
   padding-bottom: 2px;
 }
 .proyectos .texto_p p {
-  font-family: "Raleway", sans-serif;
+  font-family: "Varela Round", sans-serif;
   color: whitesmoke;
   font-size: 1.2rem;
   padding-bottom: 15px;
@@ -126,7 +192,7 @@ h1 {
   width: 100%;
   border-radius: 10px;
 }
-.proyectos .Antara {
+.proyectos .div_p {
   background-color: #1e2125;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
@@ -136,20 +202,34 @@ h1 {
   flex-direction: column;
   padding: 19px;
 }
-.proyectos .MaxDesign {
-  background-color: #1e2125;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border-radius: 30px;
-  width: 40%;
-  display: flex;
-  flex-direction: column;
-  padding: 19px;
-}
-.proyectos .Antara:hover, .proyectos .MaxDesign:hover {
+.proyectos .div_p:hover {
   box-shadow: 1px -1px 25px 0px rgba(0, 0, 0, 0.55);
   -webkit-box-shadow: 1px -1px 25px 0px rgba(0, 0, 0, 0.55);
   -moz-box-shadow: 1px -1px 25px 0px rgba(0, 0, 0, 0.55);
+  transition: all 300ms;
+  transform: translateY(-10px);
+}
+
+@media only screen and (max-width: 768px) {
+  .proyectos {
+    flex-direction: column;
+  }
+  .proyectos .div_p {
+    width: 100%;
+  }
+}
+.about {
+  justify-content: center;
+}
+.about p {
+  color: white;
+  font-size: 1.3rem;
+  font-family: "Varela Round", sans-serif;
+  width: 40%;
+  margin: 3rem;
+}
+.about .contenido {
+  display: flex;
 }
 
 /*# sourceMappingURL=app.css.map */

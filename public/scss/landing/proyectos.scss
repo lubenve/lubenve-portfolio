@@ -17,7 +17,7 @@
         }
 
         p{
-            font-family: 'Raleway', sans-serif;
+            font-family: 'Varela Round', sans-serif;
             color: whitesmoke;
             font-size: 1.2rem;
             padding-bottom: 15px;
@@ -33,7 +33,7 @@
 
     //Antara - último proyecto
 
-    .Antara{
+    .div_p{
         background-color: #1e2125;
         backdrop-filter: blur(10px);
         -webkit-backdrop-filter: blur(10px);
@@ -45,20 +45,23 @@
 
     }
 
-    .MaxDesign{
-        background-color: #1e2125;
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
-        border-radius: 30px;
-        width: 40%;
-        display: flex;
-        flex-direction: column;
-        padding: 19px;
-    }
-
-    .Antara:hover, .MaxDesign:hover{
+    .div_p:hover{
         box-shadow: 1px -1px 25px 0px rgba(0,0,0,0.55);
         -webkit-box-shadow: 1px -1px 25px 0px rgba(0,0,0,0.55);
         -moz-box-shadow: 1px -1px 25px 0px rgba(0,0,0,0.55);
+        transition: all 300ms;
+        transform: translateY(-10px);
     }
 };
+
+@media only screen and (max-width: 768px) {
+    .proyectos {
+        flex-direction: column;
+        
+        .div_p{
+            width: 100%;
+        }
+        
+    }
+
+}
