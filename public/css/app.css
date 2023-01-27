@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -98,6 +99,15 @@ section {
   opacity: 80%;
 }
 
+/* .colorr{
+    background: linear-gradient(to top, #131518, transparent);
+    position: absolute;
+    bottom: -12px;
+    width: 100%;
+    height: 100px;
+    z-index: 1000;
+    content: '';
+} */
 /* ============ main ============ */
 .main {
   display: flex;
@@ -128,9 +138,16 @@ section {
   cursor: pointer;
   z-index: 12;
 }
-.main #github:hover, .main #linkedin:hover, .main #email:hover {
+.main #github,
+.main #linkedin,
+.main #email {
+  transition: transform 250ms;
+}
+.main #github:hover,
+.main #linkedin:hover,
+.main #email:hover {
   color: #E88997;
-  transition: all 300ms;
+  transform: translateY(-10px);
 }
 .main .foto_main {
   display: flex;
@@ -157,6 +174,26 @@ section {
   cursor: pointer;
 }
 
+@media only screen and (min-width: 1901px) {
+  .parte_nav {
+    font-size: x-large;
+  }
+  .parte_nav h1 {
+    font-size: -webkit-xxx-large;
+  }
+  .main {
+    margin: 11.5rem 3rem 0;
+  }
+  .main .texto_principal h1 {
+    font-size: 6rem;
+  }
+  .main .texto_principal p {
+    font-size: 2.5rem;
+  }
+  .main .texto_principal .redes {
+    font-size: 3.5rem;
+  }
+}
 @media only screen and (max-width: 768px) {
   .main .foto_main {
     display: none;
@@ -166,21 +203,31 @@ section {
   .main .foto_main {
     display: none;
   }
+  .about .contenido {
+    flex-direction: column;
+  }
+  .about .contenido p {
+    width: auto;
+  }
 }
 .proyectos {
   margin: 3rem;
   display: flex;
   justify-content: center;
+  flex-direction: column;
   gap: 2rem;
 }
 .proyectos h1 {
   color: white;
 }
+.proyectos .texto_p {
+  max-width: 40%;
+}
 .proyectos .texto_p h2 {
   font-family: "Raleway", sans-serif;
   color: white;
-  font-size: 2.3rem;
-  padding-bottom: 2px;
+  font-size: 3rem;
+  padding-bottom: 2rem;
 }
 .proyectos .texto_p p {
   font-family: "Varela Round", sans-serif;
@@ -188,34 +235,133 @@ section {
   font-size: 1.2rem;
   padding-bottom: 15px;
 }
-.proyectos img {
-  width: 100%;
+.proyectos .texto_p .tecnologias {
+  color: #a2a2a2;
+  font-family: "Varela Round", sans-serif;
+}
+.proyectos .texto_p .links_p {
+  padding-top: 15px;
+  display: flex;
+  gap: 1.2rem;
+}
+.proyectos .texto_p .links_p i {
+  font-size: 3rem;
+  color: #1e2125;
+}
+.proyectos .texto_p .links_p .demo_p {
+  background-color: #1e2125;
+  font-family: "Varela Round", sans-serif;
+  padding: 15px;
   border-radius: 10px;
+  color: white;
+}
+.proyectos .img_p {
+  max-width: 50%;
+}
+.proyectos img {
+  border-radius: 10px;
+  width: 100%;
 }
 .proyectos .div_p {
-  background-color: #1e2125;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
   border-radius: 30px;
-  width: 40%;
   display: flex;
-  flex-direction: column;
+  gap: 3rem;
   padding: 19px;
+  align-items: center;
+  justify-content: center;
 }
 .proyectos .div_p:hover {
   box-shadow: 1px -1px 25px 0px rgba(0, 0, 0, 0.55);
   -webkit-box-shadow: 1px -1px 25px 0px rgba(0, 0, 0, 0.55);
-  -moz-box-shadow: 1px -1px 25px 0px rgba(0, 0, 0, 0.55);
-  transition: all 300ms;
-  transform: translateY(-10px);
+  /*         -moz-box-shadow: 1px -1px 25px 0px rgba(0,0,0,0.55);
+          transition: all 300ms;
+          transform: translateY(-10px); */
 }
 
+/* .proyectos{
+    margin: 3rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+
+    h1{
+        color: white;
+    }
+
+    .texto_p{
+        h2{
+            font-family: 'Raleway', sans-serif;
+            color: white;
+            font-size: 2.3rem;
+            padding-bottom: 2px;
+        }
+
+        p{
+            font-family: 'Varela Round', sans-serif;
+            color: whitesmoke;
+            font-size: 1.2rem;
+            padding-bottom: 15px;
+        }
+    }
+    //#1e2125
+
+    img{
+        width: 100%;
+        border-radius: 10px;
+
+    }
+
+    //Antara - último proyecto
+
+    .div_p{
+        background-color: #1e2125;
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border-radius: 30px;
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        padding: 19px;
+
+    }
+
+    .div_p:hover{
+        box-shadow: 1px -1px 25px 0px rgba(0,0,0,0.55);
+        -webkit-box-shadow: 1px -1px 25px 0px rgba(0,0,0,0.55);
+        -moz-box-shadow: 1px -1px 25px 0px rgba(0,0,0,0.55);
+        transition: all 300ms;
+        transform: translateY(-10px);
+    }
+};
+ */
 @media only screen and (max-width: 768px) {
   .proyectos {
     flex-direction: column;
   }
   .proyectos .div_p {
     width: 100%;
+  }
+}
+@media only screen and (min-width: 1901px) {
+  .sub_t {
+    font-size: -webkit-xxx-large;
+  }
+  .proyectos .texto_p h2 {
+    font-size: 4rem;
+  }
+  .proyectos .texto_p p {
+    font-size: 2.5rem;
+    width: 60%;
+  }
+  .proyectos .texto_p .tecnologias {
+    font-size: x-large;
+  }
+  .proyectos .texto_p .links_p i {
+    font-size: 4rem;
+  }
+  .proyectos .texto_p .links_p .demo_p {
+    padding: 15px 26px;
+    font-size: 1.6rem;
   }
 }
 .about {
@@ -230,6 +376,26 @@ section {
 }
 .about .contenido {
   display: flex;
+  align-items: center;
+}
+
+@media only screen and (min-width: 1901px) {
+  .about .sub_t {
+    font-size: -webkit-xxx-large;
+  }
+  .about p {
+    font-size: xx-large;
+  }
+}
+.skills {
+  font-size: 3.3rem;
+  margin: 3rem;
+  gap: 2rem;
+  display: flex;
+  justify-content: center;
+  background-color: #1e2125;
+  padding: 1rem;
+  border-radius: 25px;
 }
 
 /*# sourceMappingURL=app.css.map */
