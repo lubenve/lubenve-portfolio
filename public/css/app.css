@@ -10,6 +10,17 @@ body {
   background-color: #131518;
 }
 
+button {
+  margin: 0;
+  outline: 0;
+  vertical-align: middle;
+  appearance: none;
+  -webkit-appearance: none;
+  outline: none;
+  border: 0;
+  background: none;
+}
+
 .modo_oscuro {
   background-color: #131518;
 }
@@ -17,7 +28,7 @@ body {
 .sub_t {
   margin: 3rem;
   color: white;
-  font-size: 2.5rem;
+  font-size: 2.8rem;
 }
 
 a {
@@ -53,6 +64,7 @@ h1 {
 .parte_nav .nav_izq {
   display: flex;
   gap: 1.2rem;
+  cursor: pointer;
 }
 .parte_nav .nav_izq p {
   font-family: "Varela Round", sans-serif;
@@ -67,7 +79,7 @@ h1 {
 section {
   position: relative;
   width: 100%;
-  height: 100vh;
+  /*         height: 100vh; */
   display: flex;
   justify-content: center;
   background-image: url(/public/img/IMG_9000.JPG);
@@ -111,8 +123,8 @@ section {
 /* ============ main ============ */
 .main {
   display: flex;
-  margin: 10.5rem 3rem 0;
-  position: absolute;
+  margin: 9.5rem 3rem 0;
+  /*     position: absolute; */
   z-index: 10;
 }
 .main .texto_principal {
@@ -137,6 +149,7 @@ section {
   color: white;
   cursor: pointer;
   z-index: 12;
+  padding-bottom: 3rem;
 }
 .main #github,
 .main #linkedin,
@@ -226,7 +239,7 @@ section {
 .proyectos .texto_p h2 {
   font-family: "Raleway", sans-serif;
   color: white;
-  font-size: 3rem;
+  font-size: 2.5rem;
   padding-bottom: 2rem;
 }
 .proyectos .texto_p p {
@@ -269,6 +282,7 @@ section {
   padding: 19px;
   align-items: center;
   justify-content: center;
+  transition: 250ms;
 }
 .proyectos .div_p:hover {
   box-shadow: 1px -1px 25px 0px rgba(0, 0, 0, 0.55);
@@ -396,6 +410,69 @@ section {
   background-color: #1e2125;
   padding: 1rem;
   border-radius: 25px;
+}
+
+.contenido_contacto {
+  display: flex;
+  margin: 3rem;
+  gap: 3rem;
+}
+.contenido_contacto .contacto_info h1 {
+  color: white;
+  padding-bottom: 15px;
+}
+.contenido_contacto .contacto_info p {
+  color: whitesmoke;
+  font-family: "Varela Round", sans-serif;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+.contenido_contacto .mail {
+  display: flex;
+  align-items: center;
+}
+.contenido_contacto .mail i {
+  color: white;
+  font-size: 1.5rem;
+  padding-right: 8px;
+}
+.contenido_contacto .mail p {
+  margin: 0;
+}
+
+.send_mail {
+  width: 100%;
+}
+
+input, textarea {
+  background-color: #1e2125;
+  appearance: none;
+  -webkit-appearance: none;
+  outline: none;
+  border: 0;
+  border-radius: 12px;
+  font-size: 1rem;
+  color: whitesmoke;
+  font-family: "Varela Round", sans-serif;
+  margin-bottom: 10px;
+  padding: 1rem;
+  width: 100%;
+}
+
+input:focus, textarea:focus {
+  box-shadow: 0px 0px 2px 1px rgb(232, 137, 151);
+  -webkit-box-shadow: 0px 0px 2px 1px rgb(232, 137, 151);
+  -moz-box-shadow: 0px 0px 2px 1px rgb(232, 137, 151);
+  transition: all 300ms;
+}
+
+.form_enviar {
+  background-color: #E88997;
+  padding: 10px 15px;
+  border-radius: 12px;
+  color: #010101;
+  font-family: "Varela Round", sans-serif;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=app.css.map */
