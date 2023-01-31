@@ -509,4 +509,11 @@ input:focus, textarea:focus {
   font-size: 10px;
 }
 
+@media only screen and (max-width: 481px) {
+  .contenido_contacto {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
 /*# sourceMappingURL=app.css.map */
