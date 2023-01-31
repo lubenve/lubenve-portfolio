@@ -265,10 +265,34 @@ section{
 }
 
 @media only screen and (max-width: 481px) {
-    .main{
-        .foto_main{
-            display: none;
+    .parte_nav{
+    padding: 10px 2rem;
+    height: 13%;
+
+        h1 {
+            font-family: "Raleway", sans-serif;
+            font-weight: bold;
+            color: #E88997;
+            font-size: 1.5rem;
         }
+
+        .nav_izq {
+            gap: 0.4rem;
+            font-size: small;
+        }
+    } 
+
+    .main{
+    margin: 4.5rem 3rem 0;
+    
+    .foto_main{
+            display: none;
+    }
+
+    .texto_principal {
+        width: 100%;
+    }
+
     }
 
     .about{

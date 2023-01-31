@@ -226,8 +226,28 @@ section {
   }
 }
 @media only screen and (max-width: 481px) {
+  .parte_nav {
+    padding: 10px 2rem;
+    height: 13%;
+  }
+  .parte_nav h1 {
+    font-family: "Raleway", sans-serif;
+    font-weight: bold;
+    color: #E88997;
+    font-size: 1.5rem;
+  }
+  .parte_nav .nav_izq {
+    gap: 0.4rem;
+    font-size: small;
+  }
+  .main {
+    margin: 4.5rem 3rem 0;
+  }
   .main .foto_main {
     display: none;
+  }
+  .main .texto_principal {
+    width: 100%;
   }
   .about .contenido {
     flex-direction: column;
@@ -247,7 +267,7 @@ section {
   color: white;
 }
 .proyectos .texto_p {
-  max-width: 40%;
+  /*        max-width: 40%; */
 }
 .proyectos .texto_p h2 {
   font-family: "Raleway", sans-serif;
@@ -389,6 +409,19 @@ section {
   .proyectos .texto_p .links_p .demo_p {
     padding: 15px 26px;
     font-size: 1.6rem;
+  }
+}
+@media only screen and (max-width: 481px) {
+  .proyectos .texto_p {
+    width: 100%;
+  }
+  .proyectos .div_p {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .proyectos .img_p {
+    max-width: 100%;
   }
 }
 .about {
