@@ -136,8 +136,7 @@ section{
 
 .main{
     display: flex;
-    margin: 9.5rem 3rem 0;
-/*     position: absolute; */
+    margin: 8.5rem 3rem 0;
     z-index: 10;
 
     .texto_principal{
@@ -161,12 +160,28 @@ section{
         };
     }
 
-    .redes{
+    .cv{
+        background-color: #E88997;
+        font-family: 'Varela Round', sans-serif;
+        color: #131518;
+        padding: 10px 15px;
+        border-radius: 20px;
+        width: fit-content;
+        font-size: 18px;
+    }
+
+    .aber{
+        display: flex;
+        gap: 1rem;
+    }
+
+    .redes i{
         font-size: 2.5rem;
         color: white;
         cursor: pointer;
         z-index: 12;
         padding-bottom: 3rem;
+        gap: 2rem;
     };
 
     #github,
