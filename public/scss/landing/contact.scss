@@ -91,12 +91,17 @@ input:focus, textarea:focus{
     text-align: center;
     font-family: 'Varela Round', sans-serif;
     padding: 6px;
-    font-size: 10px;
+    font-size: 1rem;
 }
 
 @media only screen and (max-width: 481px) {
     .contenido_contacto{
         display: flex;
         flex-direction: column;
+
+        .mail p {
+            margin: 0;
+            font-size: 1rem;
+        }
     }
 }

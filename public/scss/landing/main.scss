@@ -41,7 +41,14 @@ h1{
     font-weight: bold;
 };
 
+
+
 /* ============ nav ============ */
+
+.oculto{
+    display: none;
+}
+
 .parte_nav{
     display: flex;
     justify-content: space-between;
@@ -80,6 +87,12 @@ h1{
             cursor: pointer;
         };
     }
+}
+
+.hamburguesa{
+    font-size: 2rem;
+    color: white;
+    display: none!important;
 }
 
 /* ============ section ============ */
@@ -266,8 +279,8 @@ section{
 
 @media only screen and (max-width: 481px) {
     .parte_nav{
-    padding: 10px 2rem;
-    height: 15%;
+    padding: 20px 2rem;
+    height: 2rem;
 
         h1 {
             font-family: "Raleway", sans-serif;
@@ -277,21 +290,50 @@ section{
         }
 
         .nav_izq {
-            gap: 0.4rem;
-            font-size: small;
+            padding: 0.8rem;
+            /* font-size: small; */
+            /* display: none; */
+            width: 100%;
+            right: -100%;
+            text-align: center;
+            top: 60px;
+            background-color: #131518;
+            position: fixed;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            flex-direction: column;
+            transition: all 300ms;
+        }
+
+        .nav_izq.active{
+            right: 0;
+
+        }
+
+        .hamburguesa{
+            display: block!important;
+            cursor: pointer;
         }
     } 
 
     .main{
     margin: 4.5rem 3rem 0;
     
-    .foto_main{
-            display: none;
-    }
+        .foto_main{
+                display: none;
+        }
 
-    .texto_principal {
-        width: 100%;
-    }
+        .texto_principal {
+            width: 100%;
+        }
+
+        .cv{
+            font-size: 12px;
+        }
+
+        .main .redes i {
+            font-size: 2.2rem
+        }
 
     }
 
