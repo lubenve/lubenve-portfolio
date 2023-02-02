@@ -1,4 +1,3 @@
-@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -133,7 +132,7 @@ section {
 /* ============ main ============ */
 .main {
   display: flex;
-  margin: 8.5rem 3rem 0;
+  margin: 9.5rem 3rem 0;
   z-index: 10;
 }
 .main .texto_principal {
@@ -161,6 +160,11 @@ section {
   border-radius: 20px;
   width: fit-content;
   font-size: 18px;
+  transition: transform 250ms;
+}
+.main .cv:hover {
+  background-color: #e16477;
+  transition: all 300ms;
 }
 .main .aber {
   display: flex;
@@ -253,8 +257,9 @@ section {
     width: 100%;
     right: -100%;
     text-align: center;
-    top: 60px;
-    background-color: #131518;
+    top: 39px;
+    /*             background-color: #131518; */
+    background-color: rgba(19, 21, 24, 0.568627451);
     position: fixed;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
@@ -296,6 +301,7 @@ section {
   justify-content: center;
   flex-direction: column;
   gap: 2rem;
+  overflow-x: hidden;
 }
 .proyectos h1 {
   color: white;
@@ -354,67 +360,8 @@ section {
 .proyectos .div_p:hover {
   box-shadow: 1px -1px 25px 0px rgba(0, 0, 0, 0.55);
   -webkit-box-shadow: 1px -1px 25px 0px rgba(0, 0, 0, 0.55);
-  /*         -moz-box-shadow: 1px -1px 25px 0px rgba(0,0,0,0.55);
-          transition: all 300ms;
-          transform: translateY(-10px); */
 }
 
-/* .proyectos{
-    margin: 3rem;
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-
-    h1{
-        color: white;
-    }
-
-    .texto_p{
-        h2{
-            font-family: 'Raleway', sans-serif;
-            color: white;
-            font-size: 2.3rem;
-            padding-bottom: 2px;
-        }
-
-        p{
-            font-family: 'Varela Round', sans-serif;
-            color: whitesmoke;
-            font-size: 1.2rem;
-            padding-bottom: 15px;
-        }
-    }
-    //#1e2125
-
-    img{
-        width: 100%;
-        border-radius: 10px;
-
-    }
-
-    //Antara - último proyecto
-
-    .div_p{
-        background-color: #1e2125;
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
-        border-radius: 30px;
-        width: 40%;
-        display: flex;
-        flex-direction: column;
-        padding: 19px;
-
-    }
-
-    .div_p:hover{
-        box-shadow: 1px -1px 25px 0px rgba(0,0,0,0.55);
-        -webkit-box-shadow: 1px -1px 25px 0px rgba(0,0,0,0.55);
-        -moz-box-shadow: 1px -1px 25px 0px rgba(0,0,0,0.55);
-        transition: all 300ms;
-        transform: translateY(-10px);
-    }
-};
- */
 @media only screen and (max-width: 768px) {
   .proyectos {
     flex-direction: column;
@@ -457,6 +404,9 @@ section {
   .proyectos .img_p {
     max-width: 100%;
   }
+  .proyectos .links_p {
+    justify-content: center;
+  }
 }
 .about {
   justify-content: center;
@@ -481,17 +431,6 @@ section {
     font-size: xx-large;
   }
 }
-.skills {
-  font-size: 3.3rem;
-  margin: 3rem;
-  gap: 2rem;
-  display: flex;
-  justify-content: center;
-  background-color: #1e2125;
-  padding: 1rem;
-  border-radius: 25px;
-}
-
 .contenido_contacto {
   display: flex;
   margin: 3rem;
@@ -570,10 +509,20 @@ input:focus, textarea:focus {
 .footer {
   background-color: #0d0e10;
   color: whitesmoke;
-  text-align: center;
+  align-items: center;
   font-family: "Varela Round", sans-serif;
   padding: 6px;
   font-size: 1rem;
+  justify-content: center;
+  gap: 2rem;
+  display: flex;
+}
+.footer i:hover {
+  color: #E88997;
+  transition: all 300ms;
+}
+.footer i:focus {
+  color: #e16477;
 }
 
 @media only screen and (max-width: 481px) {

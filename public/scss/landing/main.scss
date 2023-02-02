@@ -149,7 +149,7 @@ section{
 
 .main{
     display: flex;
-    margin: 8.5rem 3rem 0;
+    margin: 9.5rem 3rem 0;
     z-index: 10;
 
     .texto_principal{
@@ -181,6 +181,12 @@ section{
         border-radius: 20px;
         width: fit-content;
         font-size: 18px;
+        transition: transform 250ms;
+    }
+
+    .cv:hover{
+        background-color: #e16477;
+        transition: all 300ms;
     }
 
     .aber{
@@ -296,8 +302,9 @@ section{
             width: 100%;
             right: -100%;
             text-align: center;
-            top: 60px;
-            background-color: #131518;
+            top: 39px;
+/*             background-color: #131518; */
+            background-color: #13151891;
             position: fixed;
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
