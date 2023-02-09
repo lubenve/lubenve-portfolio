@@ -77,6 +77,10 @@ h1 {
   color: white;
   cursor: pointer;
 }
+.parte_nav .nav_izq p:hover {
+  color: #E88997;
+  transition: all 300ms;
+}
 
 .hamburguesa {
   font-size: 2rem;
